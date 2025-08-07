@@ -3,7 +3,7 @@ package C_Array_Operations.B_Searching_Array;
 public class b_BinarySearch {
     public static void main(String[] args) {
         int[] arr = {2, 4, 6, 8, 10, 12, 14};  // Predefined sorted array
-        int target = 10;                      // Element to search
+        int target = 11;                      // Element to search
 
         int start = 0, end = arr.length - 1;
         boolean found = false;
