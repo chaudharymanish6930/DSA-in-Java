@@ -1,10 +1,10 @@
 package B_Array;
-class Student {
+class Students {
     String name;
     int age;
 
     // Constructor
-    Student(String name, int age) {
+    Students(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -18,12 +18,12 @@ class Student {
 public class e_DirectObjectInitialisation {
     public static void main(String[] args) {
         // Step 1: Declare an array of Student with size 3
-        Student[] students = new Student[3];
+        Students[] students = new Students[3];
 
         // Step 2: Assign each Student object to the array
-        students[0] = new Student("Alice", 20);
-        students[1] = new Student("Bob", 22);
-        students[2] = new Student("Charlie", 21);
+        students[0] = new Students("Alice", 20);
+        students[1] = new Students("Bob", 22);
+        students[2] = new Students("Charlie", 21);
 
         // Step 3: Display student details
         System.out.println("--- Student Details ---");
