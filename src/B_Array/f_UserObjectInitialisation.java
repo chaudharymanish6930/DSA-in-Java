@@ -25,7 +25,7 @@ public class f_UserObjectInitialisation {
         // Take size of the array
         System.out.print("Enter number of students: ");
         int size = sc.nextInt();
-        sc.nextLine(); // Clear buffer
+        sc.nextLine();
 
         // Create array of Student objects
         Student[] students = new Student[size];
@@ -42,10 +42,10 @@ public class f_UserObjectInitialisation {
 
         // Display all students
         System.out.println("\n--- Student Details ---");
+        // for each loop
         for (Student s : students) {
             s.display();
         }
-
         sc.close();
     }
 }
