@@ -1,4 +1,4 @@
-package C_Array_Operations;
+package C_Array_Operations.A_Basic_Operations;
 
 public class a_TraversalOfArray {
     public static void main(String[] args){
