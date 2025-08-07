@@ -1,6 +1,6 @@
 package C_Array_Operations;
 
-public class b_InsertonAtIndex {
+public class b_InsertionAtIndex {
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40, 50};
 
