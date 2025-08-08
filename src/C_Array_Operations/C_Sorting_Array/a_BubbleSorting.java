@@ -12,19 +12,18 @@ public class a_BubbleSorting {
         int leng = arr.length;
 
         int temp;
-        for(int i=1; i<leng; i++){
-            boolean swapped = false;
+        for(int i=1; i<=leng; i++){
             for(int j=0; j<leng-i; j++){  // 1 -> i
                 if(arr[j] > arr[j+1]){
                     temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
-                    swapped = true;
                 }
             }
-            if(swapped== false){
-                break;
+            for(int n:arr){
+                System.out.print(n+" ");
             }
+            System.out.println();
         }
 
         System.out.println("after sorting: ");
