@@ -9,7 +9,7 @@ public class c_SelectionSort {
             int minIndex = i;
 
             for (int j = i + 1; j < size; j++) {
-                if (arr[j] < arr[minIndex]) {
+                if (arr[minIndex] > arr[j]) {
                     minIndex = j;
                 }
             }
@@ -18,12 +18,12 @@ public class c_SelectionSort {
             arr[minIndex] = arr[i];
             arr[i] = temp;
             System.out.println(arr[i]+" ");
+
         }
 
         System.out.println();
-        for (int n : arr) {
+         for (int n : arr) {
             System.out.print(n + " ");
-
         }
     }
 }
