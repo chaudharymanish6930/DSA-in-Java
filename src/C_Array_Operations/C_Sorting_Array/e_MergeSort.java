@@ -60,5 +60,10 @@ public class e_MergeSort {
             k++;
             i++;
         }
+        while(j<+higherIndex){
+            array[k] = tempArray[j];
+            k++;
+            j++;
+        }
     }
 }
