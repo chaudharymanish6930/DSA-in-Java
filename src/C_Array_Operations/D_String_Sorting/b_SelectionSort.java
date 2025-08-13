@@ -18,7 +18,7 @@ public class b_SelectionSort {
             temp = arr[minIndex];
             arr[minIndex] = arr[i];
             arr[i] = temp;
-            System.out.println(arr[i]+" ");
+            System.out.println(arr[i] + " ");
 
         }
 
@@ -27,5 +27,4 @@ public class b_SelectionSort {
             System.out.print(n + " ");
         }
     }
-
 }
