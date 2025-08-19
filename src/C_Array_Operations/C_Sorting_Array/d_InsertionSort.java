@@ -15,7 +15,6 @@ public class d_InsertionSort {
             }
             arr[j] = temp; // insert temp in the correct position
         }
-
         // Print sorted array
         for (int num : arr) {
             System.out.print(num + " ");
