@@ -35,6 +35,7 @@ public class e_MergeSort {
             mergeArray(lowerIndex, middle, higherIndex);
         }
     }
+
     public void mergeArray(int lowerIndex, int middle, int higherIndex){
         for(int i=lowerIndex; i<=higherIndex; i++){
             tempArray[i] = array[i];
