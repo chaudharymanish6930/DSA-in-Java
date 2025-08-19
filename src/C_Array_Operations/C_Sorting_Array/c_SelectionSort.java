@@ -13,6 +13,7 @@ public class c_SelectionSort {
                     minIndex = j;
                 }
             }
+
             // swapping...
             int temp = arr[minIndex];
             arr[minIndex] = arr[i];
