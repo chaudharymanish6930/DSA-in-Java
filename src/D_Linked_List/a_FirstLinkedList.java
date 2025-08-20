@@ -4,7 +4,7 @@ package D_Linked_List;
 
 //import java.util.LinkedList;
 
-public class main {
+public class a_FirstLinkedList {
     public  static void main(String[] args){
         LinkedList link = new LinkedList();
 
