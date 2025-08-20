@@ -6,10 +6,10 @@ package D_Linked_List;
 
 public class a_FirstLinkedList {
     public  static void main(String[] args){
-        LinkedList link = new LinkedList();
+        LinkedList num = new LinkedList();
 
-        link.add(4);
-        link.add("manish");
+        num.add(4);
+        num.add("manish");
         System.out.println(link);
     }
 }
