@@ -10,7 +10,6 @@ class node{
     }
 }
 
-
 public class LinkedList {
     node head;
 
@@ -26,6 +25,32 @@ public class LinkedList {
                 currNode = currNode.next;
             }
             currNode.next = newNode;
+        }
+    }
+
+    public void addFirst(int data){
+        node newNode = new node(data);
+        if(head == null){
+            head = newNode;
+            return;
+        }
+
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public void addLast(int data){
+        node newNode = new node(data);
+        node currNode = head;
+        if(head == null){
+            head = newNode;
+            return;
+        }
+        else{
+            while(currNode.next != null){
+                currNode = currNode.next;
+            }
+            currNode.next =newNode;
         }
     }
 
