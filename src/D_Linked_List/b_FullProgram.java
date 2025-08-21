@@ -54,6 +54,34 @@ public class b_FullProgram {
         currNode.next = newNode;
     }
 
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println("the list is empty");
+            return;
+        }
+
+        head = head.next;
+    }
+
+    public void deleteLast(){
+        if(head == null){
+            System.out.println("the list is empty");
+            return;
+        }
+
+        if(head.next == null){
+            head = null;
+            return;
+        }
+
+        node secondLast = head;   // head hain yaha
+        node lastNode = head.next;  // head ka next yaha (null)
+        while(lastNode.next != null){  // null nahi toh
+            lastNode = lastNode.next;
+            secondLast = secondLast.next;
+        }
+    }
+
     public void printList(){
         if(head == null){
             System.out.println("List is empty");
@@ -77,6 +105,9 @@ public class b_FullProgram {
         list.addLast(40);
         list.addFirst(30);
         list.add(100);
+        list.printList();
+
+        list.deleteFirst();
         list.printList();
     }
 }
