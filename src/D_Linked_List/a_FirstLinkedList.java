@@ -7,5 +7,14 @@ public class a_FirstLinkedList {
         num.add(4);
         num.add(6);
         num.printvalue();
+
+        num.addFirst(10);
+        num.printvalue();
+
+        num.addLast(20);
+        num.printvalue();
+
+        num.addFirst(90);
+        num.printvalue();
     }
 }
