@@ -1,6 +1,6 @@
 package D_Linked_List;
 
-public class a_FirstLinkedList {
+public class a_MainProgram {
     public  static void main(String[] args){
         LinkedList num = new LinkedList();
 
