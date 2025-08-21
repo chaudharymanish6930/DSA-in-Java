@@ -80,6 +80,7 @@ public class b_FullProgram {
             lastNode = lastNode.next;
             secondLast = secondLast.next;
         }
+        secondLast.next = null;
     }
 
     public void printList(){
@@ -96,6 +97,16 @@ public class b_FullProgram {
         System.out.println("Null");
     }
 
+    public int getSize(){
+        int i =0;
+        node currNode = head;
+        while(currNode != null){
+            i++;
+            currNode = currNode.next;
+        }
+        return i;
+    }
+
     public static void main(String[] args) {
         b_FullProgram list = new b_FullProgram();
         list.addFirst(10);
@@ -109,5 +120,12 @@ public class b_FullProgram {
 
         list.deleteFirst();
         list.printList();
+
+        list.deleteLast();
+        list.printList();
+//        list.deleteLast();
+        list.printList();
+        System.out.println(list.getSize());
+
     }
 }
