@@ -30,6 +30,7 @@ public class LinkedList {
 
     public void addFirst(int data){
         node newNode = new node(data);
+
         if(head == null){
             head = newNode;
             return;
@@ -42,6 +43,7 @@ public class LinkedList {
     public void addLast(int data){
         node newNode = new node(data);
         node currNode = head;
+
         if(head == null){
             head = newNode;
             return;
@@ -77,5 +79,35 @@ public class LinkedList {
         }
         return i;
     }
+
+    public void deleteFirst(){
+        if(head == null){
+            System.out.println("the list is empty");
+            return;
+        }
+
+        head = head.next;
+    }
+
+    public void deleteLast(){
+        if(head == null){
+            System.out.println("the list is empty");
+            return;
+        }
+
+        if(head.next == null){
+            head = null;
+            return;
+        }
+
+        node secondLast = head;   // head hain yaha
+        node lastNode = head.next;  // head ka next yaha (null)
+        while(lastNode.next != null){  // null nahi toh
+            lastNode = lastNode.next;
+            secondLast = secondLast.next;
+        }
+        secondLast.next = null;
+    }
+
 }
 
