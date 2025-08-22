@@ -67,4 +67,15 @@ public class LinkedList {
         }
         System.out.println("Null");
     }
+
+    public int getSize(){
+        int i =0;
+        node currNode = head;
+        while(currNode != null){
+            i++;
+            currNode = currNode.next;
+        }
+        return i;
+    }
 }
+

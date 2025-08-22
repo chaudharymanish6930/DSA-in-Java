@@ -16,5 +16,7 @@ public class a_MainProgram {
 
         num.addFirst(90);
         num.printvalue();
+
+        System.out.println(num.getSize());
     }
 }
