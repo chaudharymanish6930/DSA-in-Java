@@ -14,7 +14,16 @@ public class a_MainProgram {
         num.addLast(20);
         num.printvalue();
 
-        num.addFirst(90);
+        System.out.println(num.getSize());
+
+        num.printvalue();
+
+        num.deleteLast();
+        num.printvalue();
+
+        System.out.println(num.getSize());
+
+        num.deleteFirst();
         num.printvalue();
 
         System.out.println(num.getSize());
