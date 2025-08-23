@@ -1,12 +1,13 @@
 package D_Linked_List.A_Singly_Linked_List;
 
-public class b_BasicPrintData {
+public class c_PrintDatabyDisplay {
     public static class node{
         int data;
         node next;
 
         node(int data){
             this.data = data;
+            this.next = null;
         }
     }
 
@@ -23,7 +24,7 @@ public class b_BasicPrintData {
         }
     }
 
-    public static void main(String [] args){
+    public static void main(String[] args){
         node a = new node(10);
         node b = new node(20);
         node c = new node(30);
@@ -39,28 +40,11 @@ public class b_BasicPrintData {
         e.next = f;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60
         f.next = g;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70
 
-        // data print by using for loop
-        node temp;
-        temp = a;
-        for(int i =1; i <= 7; i++ ){
-            System.out.print(temp.data+" -> ");
-            temp = temp.next;
-        }
-        System.out.println("Null");
-
-        // data printed by using while loop
-        // again temp assign the value of a
-        temp = a;
-        while(temp != null){
-            System.out.print(temp.data+" -> ");
-            temp = temp.next;
-        }
-        System.out.println("Null");
-
         // display and displayRecursive
-        b_BasicPrintData obj= new b_BasicPrintData();
+        c_PrintDatabyDisplay obj= new c_PrintDatabyDisplay();
         obj.Display(a);
-        System.out.println();
+        System.out.println("Null");
         obj.DisplayRecursive(a);
+        System.out.println("Null");
     }
 }
