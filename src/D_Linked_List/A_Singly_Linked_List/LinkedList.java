@@ -1,17 +1,17 @@
-package D_Linked_List;
+package D_Linked_List.A_Singly_Linked_List;
 
-public class b_FullProgram {
-    node head;
+class node{
+    int data;
+    node next;
 
-    class node{
-        int data;
-        node next;
-
-        node(int data){
-            this.data= data;
-            this.next = null;
-        }
+    public node(int data){
+        this.data=data;
+        this.next=null;
     }
+}
+
+public class LinkedList {
+    node head;
 
     public void add(int data){
         node newNode = new node(data);
@@ -30,6 +30,7 @@ public class b_FullProgram {
 
     public void addFirst(int data){
         node newNode = new node(data);
+
         if(head == null){
             head = newNode;
             return;
@@ -41,17 +42,42 @@ public class b_FullProgram {
 
     public void addLast(int data){
         node newNode = new node(data);
+        node currNode = head;
+
         if(head == null){
             head = newNode;
             return;
         }
+        else{
+            while(currNode.next != null){
+                currNode = currNode.next;
+            }
+            currNode.next =newNode;
+        }
+    }
 
-        node currNode = head;
-        while(currNode.next != null){
-            currNode = currNode.next;
+    public void printvalue(){
+        if(head== null){
+            System.out.println("list is empty");
+            return;
         }
 
-        currNode.next = newNode;
+        node currNode = head;
+        while(currNode != null){
+            System.out.print(currNode.data+"-> ");
+            currNode = currNode.next;
+        }
+        System.out.println("Null");
+    }
+
+    public int getSize(){
+        int i =0;
+        node currNode = head;
+        while(currNode != null){
+            i++;
+            currNode = currNode.next;
+        }
+        return i;
     }
 
     public void deleteFirst(){
@@ -83,49 +109,5 @@ public class b_FullProgram {
         secondLast.next = null;
     }
 
-    public void printList(){
-        if(head == null){
-            System.out.println("List is empty");
-            return;
-        }
-
-        node currNode = head;
-        while(currNode != null){
-            System.out.print(currNode.data +"->");
-            currNode = currNode.next;
-        }
-        System.out.println("Null");
-    }
-
-    public int getSize(){
-        int i =0;
-        node currNode = head;
-        while(currNode != null){
-            i++;
-            currNode = currNode.next;
-        }
-        return i;
-    }
-
-    public static void main(String[] args) {
-        b_FullProgram list = new b_FullProgram();
-        list.addFirst(10);
-        list.addFirst(20);
-        list.printList();
-
-        list.addLast(40);
-        list.addFirst(30);
-        list.add(100);
-        list.printList();
-
-        list.deleteFirst();
-        list.printList();
-
-        list.deleteLast();
-        list.printList();
-//        list.deleteLast();
-        list.printList();
-        System.out.println(list.getSize());
-
-    }
 }
+

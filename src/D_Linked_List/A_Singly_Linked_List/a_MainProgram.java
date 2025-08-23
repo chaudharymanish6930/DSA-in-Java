@@ -1,4 +1,4 @@
-package D_Linked_List;
+package D_Linked_List.A_Singly_Linked_List;
 
 public class a_MainProgram {
     public  static void main(String[] args){
