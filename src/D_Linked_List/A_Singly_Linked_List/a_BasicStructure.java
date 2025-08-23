@@ -10,7 +10,7 @@ public class a_BasicStructure {
         }
     }
 
-    public static void main(String[] args){
+    public  static void main(String[] args){
         node a = new node(1);
         System.out.println(a); // $node@8efb846
         System.out.println(a.data);  // 1
