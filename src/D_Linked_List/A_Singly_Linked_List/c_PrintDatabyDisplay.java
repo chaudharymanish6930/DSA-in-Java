@@ -31,6 +31,15 @@ public class c_PrintDatabyDisplay {
         System.out.print(head.data+" -> ");
     }
 
+    public int length(node head){
+        int count =0;
+        while(head != null){
+            count++;
+            head = head.next;
+        }
+        return count;
+    }
+
     public static void main(String[] args){
         node a = new node(10);
         node b = new node(20);
@@ -51,8 +60,13 @@ public class c_PrintDatabyDisplay {
         c_PrintDatabyDisplay obj= new c_PrintDatabyDisplay();
         obj.Display(a);
         System.out.println("Null");
+
         obj.DisplayRecursive(a);
         System.out.println("Null");
+
         obj.DisplayReverse(a);
+        System.out.println("Null");
+
+        System.out.println(obj.length(a));
     }
 }
