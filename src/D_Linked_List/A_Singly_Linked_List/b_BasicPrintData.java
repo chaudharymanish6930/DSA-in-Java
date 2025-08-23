@@ -10,19 +10,6 @@ public class b_BasicPrintData {
         }
     }
 
-    public  void DisplayRecursive(node head){
-        if(head == null) return;
-        System.out.print(head.data+" -> ");
-        DisplayRecursive(head.next);
-    }
-
-    public void Display(node head){
-        while(head != null){
-            System.out.print(head.data+" -> ");
-            head = head.next;
-        }
-    }
-
     public static void main(String [] args){
         node a = new node(10);
         node b = new node(20);
@@ -57,10 +44,5 @@ public class b_BasicPrintData {
         }
         System.out.println("Null");
 
-        // display and displayRecursive
-        b_BasicPrintData obj= new b_BasicPrintData();
-        obj.Display(a);
-        System.out.println();
-        obj.DisplayRecursive(a);
     }
 }

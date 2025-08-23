@@ -24,6 +24,13 @@ public class c_PrintDatabyDisplay {
         }
     }
 
+    public void DisplayReverse(node head){
+        if(head == null) return;
+
+        DisplayRecursive(head.next);
+        System.out.print(head.data+" -> ");
+    }
+
     public static void main(String[] args){
         node a = new node(10);
         node b = new node(20);
@@ -46,5 +53,6 @@ public class c_PrintDatabyDisplay {
         System.out.println("Null");
         obj.DisplayRecursive(a);
         System.out.println("Null");
+        obj.DisplayReverse(a);
     }
 }
