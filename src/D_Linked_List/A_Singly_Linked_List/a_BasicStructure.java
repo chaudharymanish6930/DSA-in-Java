@@ -30,5 +30,16 @@ public class a_BasicStructure {
         System.out.println(c.data);   // 3
         System.out.println(c.next);    // null
 
+        node d = new node(4);
+        c.next=d;
+
+        node e = new node(5);
+        d.next = e;
+
+        System.out.println(a.next.data);  // 2
+        System.out.println(a.next.next.data);  // 3
+        System.out.println(a.next.next.next.data);  // 4
+        System.out.println(a.next.next.next.next.data);  // 5
+
     }
 }
