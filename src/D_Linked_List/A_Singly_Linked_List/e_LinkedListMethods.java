@@ -1,6 +1,6 @@
 package D_Linked_List.A_Singly_Linked_List;
 
-public class a_MainProgram {
+public class e_LinkedListMethods {
     public  static void main(String[] args){
         LinkedList num = new LinkedList();
 
