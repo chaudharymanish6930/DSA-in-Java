@@ -141,4 +141,25 @@ public class LinkedList {
         }
         return temp.data;
     }
+
+    public void deleteAt(int index){
+        node temp = head;
+        if(index==0){
+            head= head.next;
+        }
+        for(int i=1; i<=index; i++){
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+
+        /*
+        for you have a tail of the linked list
+        then you assign the last element to the tail
+        like::
+        if(index == size-1){
+            tail.temp;
+        }
+        at the end size--
+         */
+    }
 }
