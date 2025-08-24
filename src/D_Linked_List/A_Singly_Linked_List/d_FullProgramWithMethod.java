@@ -1,6 +1,6 @@
 package D_Linked_List.A_Singly_Linked_List;
 
-public class b_FullProgram {
+public class d_FullProgramWithMethod {
     node head;
     int size=0;
 
@@ -73,11 +73,13 @@ public class b_FullProgram {
     public void deleteLast(){
         if(head == null){
             System.out.println("the list is empty");
+            size--;
             return;
         }
 
         if(head.next == null){
             head = null;
+            size--;
             return;
         }
 
@@ -105,25 +107,74 @@ public class b_FullProgram {
         System.out.println("Null");
     }
 
-//    public int getSize(){
-//        int i =0;
-//        node currNode = head;
-//        while(currNode != null){
-//            i++;
-//            currNode = currNode.next;
-//        }
-//        return i;
-//    }
+
+
+    public void inserAt(int index,int data){
+        node newNode  = new node(data);
+        node temp = head;
+        if(index == size){
+            addLast(data);
+            size++;
+            return;
+        }
+        else if(index==0){
+            addFirst(data);
+            size++;
+            return ;
+        }
+        else if(index < 0 || index > size){
+            System.out.println("your input is invalis");
+        }
+        for(int i=1; i<=index-1; i++){
+            temp =temp.next;
+        }
+        newNode.next = temp.next;   // newNode  -> next <- temp
+        temp.next = newNode;
+        size++;
+    }
+
+    public int getElementAt(int index){
+        if(index < 0 || index > size){
+            System.out.println("your input is invalid");
+            return -1;
+        }
+       node temp = head;
+        for(int i=1; i<=index; i++){
+            temp = temp.next;
+        }
+        return temp.data;
+    }
+
+    public void deleteAt(int index){
+       node temp = head;
+        if(index==0){
+            head= head.next;
+            size--;
+        }
+        for(int i=1; i<=index; i++){
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        size--;
+        /*
+        for you have a tail of the linked list
+        then you assign the last element to the tail
+        like::
+        if(index == size-1){
+            tail.temp;
+        }
+        at the end size--
+         */
+    }
 
     public static void main(String[] args) {
-        b_FullProgram list = new b_FullProgram();
-        list.addFirst(10);
-        list.addFirst(20);
+        d_FullProgramWithMethod list = new d_FullProgramWithMethod();
+        list.add(10);
+        list.add(20);
         list.printList();
 
         list.addLast(40);
         list.addFirst(30);
-        list.add(100);
         list.printList();
 
         list.deleteFirst();
@@ -131,9 +182,16 @@ public class b_FullProgram {
 
         list.deleteLast();
         list.printList();
-//        list.deleteLast();
+
+//        list.inserAt(4,100);
+//      list.printList();  // invalid output
+        list.inserAt(2,200);
+        list.inserAt(3,300);
+
+        System.out.println(list.getElementAt(1));
         list.printList();
-//        System.out.println(list.getSize());
+
         System.out.println(list.size);
+
     }
 }
