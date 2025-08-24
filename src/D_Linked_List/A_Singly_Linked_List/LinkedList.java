@@ -142,4 +142,3 @@ public class LinkedList {
         return temp.data;
     }
 }
-

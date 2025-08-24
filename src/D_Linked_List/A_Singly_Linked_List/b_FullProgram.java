@@ -2,6 +2,7 @@ package D_Linked_List.A_Singly_Linked_List;
 
 public class b_FullProgram {
     node head;
+    int size=0;
 
     class node{
         int data;
@@ -26,23 +27,27 @@ public class b_FullProgram {
             }
             currNode.next = newNode;
         }
+        size++;
     }
 
     public void addFirst(int data){
         node newNode = new node(data);
         if(head == null){
             head = newNode;
+            size++;
             return;
         }
 
         newNode.next = head;
         head = newNode;
+        size++;
     }
 
     public void addLast(int data){
         node newNode = new node(data);
         if(head == null){
             head = newNode;
+            size++;
             return;
         }
 
@@ -52,6 +57,7 @@ public class b_FullProgram {
         }
 
         currNode.next = newNode;
+        size++;
     }
 
     public void deleteFirst(){
@@ -61,6 +67,7 @@ public class b_FullProgram {
         }
 
         head = head.next;
+        size--;
     }
 
     public void deleteLast(){
@@ -81,6 +88,7 @@ public class b_FullProgram {
             secondLast = secondLast.next;
         }
         secondLast.next = null;
+        size--;
     }
 
     public void printList(){
@@ -97,15 +105,15 @@ public class b_FullProgram {
         System.out.println("Null");
     }
 
-    public int getSize(){
-        int i =0;
-        node currNode = head;
-        while(currNode != null){
-            i++;
-            currNode = currNode.next;
-        }
-        return i;
-    }
+//    public int getSize(){
+//        int i =0;
+//        node currNode = head;
+//        while(currNode != null){
+//            i++;
+//            currNode = currNode.next;
+//        }
+//        return i;
+//    }
 
     public static void main(String[] args) {
         b_FullProgram list = new b_FullProgram();
@@ -125,7 +133,7 @@ public class b_FullProgram {
         list.printList();
 //        list.deleteLast();
         list.printList();
-        System.out.println(list.getSize());
-
+//        System.out.println(list.getSize());
+        System.out.println(list.size);
     }
 }
