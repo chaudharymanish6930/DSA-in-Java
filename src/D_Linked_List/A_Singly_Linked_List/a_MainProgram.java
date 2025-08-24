@@ -18,6 +18,9 @@ public class a_MainProgram {
 
         num.printvalue();
 
+        num.inserAt(1,1100);
+        num.printvalue();
+
         num.deleteLast();
         num.printvalue();
 
@@ -27,5 +30,8 @@ public class a_MainProgram {
         num.printvalue();
 
         System.out.println(num.getSize());
+
+        System.out.println(num.getElementAt(2));
+
     }
 }

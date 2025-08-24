@@ -109,5 +109,37 @@ public class LinkedList {
         secondLast.next = null;
     }
 
+    public void inserAt(int index,int data){
+        node newNode  = new node(data);
+        node temp = head;
+        if(index == getSize()){
+            addLast(data);
+            return;
+        }
+        else if(index==0){
+            addFirst(data);
+            return ;
+        }
+        else if(index < 0 || index > getSize()){
+            System.out.println("your input is invalis");
+        }
+        for(int i=1; i<=index-1; i++){
+            temp =temp.next;
+        }
+        newNode.next = temp.next;   // newNode  -> next <- temp
+        temp.next = newNode;
+    }
+
+    public int getElementAt(int index){
+        if(index < 0 || index > getSize()){
+            System.out.println("your input is invalis");
+            return -1;
+        }
+        node temp = head;
+        for(int i=1; i<=index; i++){
+            temp = temp.next;
+        }
+        return temp.data;
+    }
 }
 
