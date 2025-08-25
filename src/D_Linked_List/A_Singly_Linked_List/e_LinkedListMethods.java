@@ -31,6 +31,7 @@ public class e_LinkedListMethods {
 
         System.out.println(num.getSize());
 
+
         System.out.println(num.getElementAt(2));
 
     }
