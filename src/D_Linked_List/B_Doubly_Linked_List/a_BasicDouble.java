@@ -160,9 +160,6 @@ public class a_BasicDouble {
         Node b = new Node(20);
         Node c = new Node(30);
         Node d = new Node(40);
-        Node e = new Node(50);
-        Node f = new Node(60);
-        Node g = new Node(70);
 
         a.prev = null;
         a.next = b;
@@ -171,17 +168,36 @@ public class a_BasicDouble {
         c.prev = b;
         c.next = d;
         d.prev = c;
-        d.next = e;
-        e.prev = d;
-        e.next = f;
-        f.prev = e;
-        f.next = g;
-        g.prev = f;
-        g.next = null;
+        d.next = null;
 
 //        it is static method
 //        a_BasicDouble obj = new a_BasicDouble();
 //        obj.display(a);
+        a_BasicDouble list = new a_BasicDouble();
+        list.insertAtHead(10);
+        list.insertAtHead(20);
+        list.insertAtHead(30);
+        list.display();
+
+        list.insertAtTail(40);
+        list.insertAtTail(50);
+        list.display();
+
+        list.insertAtAnyIndex(60,3);
+        list.display();
+
+        list.displayReverse();
+
+        list.deleteLast();
+        list.display();
+
+        list.deleteFirst();
+        list.display();
+
+        list.deleteAtAnyIndex(2);
+        list.display();
+
+
 
 
     }

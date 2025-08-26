@@ -1,15 +1,15 @@
 package D_Linked_List.B_Doubly_Linked_List;
 
 public class DoublyLinkedList {
-    node head;
-    node tail;
+    Node head;
+    Node tail;
 
-    class node {
+    class Node {
         int data;
-        node prev;
-        node next;
+        Node prev;
+        Node next;
 
-        node(int data) {
+        Node(int data) {
             this.data = data;
             this.prev = null;
             this.next = null;
@@ -17,15 +17,15 @@ public class DoublyLinkedList {
     }
 
     public void insertAtHead(int data) {
-        node newNode = new node(data);
-        node temp = head;
+        Node newNode = new Node(data);
+        Node temp = head;
         newNode.next = temp;
         head = newNode;
     }
 
     public void insertAtTail(int data) {
-        node newNode = new node(data);
-        node temp = head;
+        Node newNode = new Node(data);
+        Node temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
@@ -34,8 +34,8 @@ public class DoublyLinkedList {
     }
 
     public void insertAtAnyIndex(int data, int index) {
-        node newNode = new node(data);
-        node temp = head;
+        Node newNode = new Node(data);
+        Node temp = head;
         for (int i = 1; i <= index - 1; i++) {
             temp = temp.next;
         }
@@ -46,7 +46,7 @@ public class DoublyLinkedList {
     }
 
     public void display() {
-        node temp = head;
+        Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
@@ -57,14 +57,12 @@ public class DoublyLinkedList {
     public void displayReverse() {
         if (head == null) return;
 
-        node temp = head;
-        // Move to last node
+        Node temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
 
         System.out.print("Reverse: ");
-        // Print in reverse
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.prev;
@@ -101,7 +99,7 @@ public class DoublyLinkedList {
             return;
         }
 
-        node temp = head;
+        Node temp = head;
         // Move to last node
         while (temp.next != null) {
             temp = temp.next;
@@ -128,7 +126,7 @@ public class DoublyLinkedList {
             return;
         }
 
-        node temp = head;
+        Node temp = head;
         int count = 0;
 
         // Traverse to the given index
