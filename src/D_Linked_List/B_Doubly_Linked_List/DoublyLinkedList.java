@@ -150,4 +150,40 @@ public class DoublyLinkedList {
         temp.prev.next = temp.next;
         temp.next.prev = temp.prev;
     }
+
+    public int getElementAtIndex(int index) {
+        if (head == null) {
+            System.out.println("List is empty!");
+            return -1;  // special value
+        }
+
+        if (index < 0) {
+            System.out.println("Invalid index!");
+            return -1;
+        }
+
+        Node temp = head;
+        int count = 0;
+
+        while (temp != null) {
+            if (count == index) {
+                return temp.data;   // found element
+            }
+            temp = temp.next;
+            count++;
+        }
+
+        System.out.println("Index out of range!");
+        return -1;
+    }
+
+    public int getSize() {
+        int count = 0;
+        Node temp = head;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
 }
