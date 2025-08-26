@@ -73,7 +73,6 @@ public class d_FullProgramWithMethod {
     public void deleteLast(){
         if(head == null){
             System.out.println("the list is empty");
-            size--;
             return;
         }
 
@@ -187,6 +186,7 @@ public class d_FullProgramWithMethod {
 //      list.printList();  // invalid output
         list.inserAt(2,200);
         list.inserAt(3,300);
+        list.deleteAt(3);
 
         System.out.println(list.getElementAt(1));
         list.printList();
