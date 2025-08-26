@@ -27,6 +27,7 @@ public class e_LinkedListMethods {
         System.out.println(num.getSize());
 
         num.deleteFirst();
+        num.deleteAt(2);
         num.printvalue();
 
         System.out.println(num.getSize());

@@ -19,6 +19,7 @@ public class LinkedList {
         node currNode = head;
         if(head == null){
             head = newNode;
+            return;
         }
         else{
             while(currNode.next != null){
@@ -121,7 +122,7 @@ public class LinkedList {
             return ;
         }
         else if(index < 0 || index > getSize()){
-            System.out.println("your input is invalis");
+            System.out.println("your input is invalid");
         }
         for(int i=1; i<=index-1; i++){
             temp =temp.next;
@@ -132,7 +133,7 @@ public class LinkedList {
 
     public int getElementAt(int index){
         if(index < 0 || index > getSize()){
-            System.out.println("your input is invalis");
+            System.out.println("your input is invalid");
             return -1;
         }
         node temp = head;
