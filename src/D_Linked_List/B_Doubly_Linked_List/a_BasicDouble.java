@@ -6,27 +6,28 @@ public class a_BasicDouble {
     Node head;
     Node tail;
 
-    public static class Node{
+    public static class Node {
         int data;
         Node next;
         Node prev;
 
-        Node(int data){
+        Node(int data) {
             this.data = data;
             this.next = null;
             this.prev = null;
         }
     }
+
     public void insertAtHead(int data) {
-        DoublyLinkedList.node newNode = new DoublyLinkedList.node(data);
-        DoublyLinkedList.node temp = head;
+        Node newNode = new Node(data);
+        Node temp = head;
         newNode.next = temp;
         head = newNode;
     }
 
     public void insertAtTail(int data) {
-        DoublyLinkedList.node newNode = new DoublyLinkedList.node(data);
-        DoublyLinkedList.node temp = head;
+        Node newNode = new Node(data);
+        Node temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
@@ -35,8 +36,8 @@ public class a_BasicDouble {
     }
 
     public void insertAtAnyIndex(int data, int index) {
-        DoublyLinkedList.node newNode = new DoublyLinkedList.node(data);
-        DoublyLinkedList.node temp = head;
+        Node newNode = new Node(data);
+        Node temp = head;
         for (int i = 1; i <= index - 1; i++) {
             temp = temp.next;
         }
@@ -47,7 +48,7 @@ public class a_BasicDouble {
     }
 
     public void display() {
-        DoublyLinkedList.node temp = head;
+        Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + " ");
             temp = temp.next;
@@ -58,7 +59,7 @@ public class a_BasicDouble {
     public void displayReverse() {
         if (head == null) return;
 
-        DoublyLinkedList.node temp = head;
+        Node temp = head;
         // Move to last node
         while (temp.next != null) {
             temp = temp.next;
@@ -73,7 +74,7 @@ public class a_BasicDouble {
         System.out.println();
     }
 
-    public void deleteFirst(){
+    public void deleteFirst() {
         if (head == null) {
             System.out.println("List is empty, nothing to delete!");
             return;
@@ -90,7 +91,7 @@ public class a_BasicDouble {
         head.prev = null;
     }
 
-    public void deleteLast(){
+    public void deleteLast() {
         if (head == null) {
             System.out.println("List is empty, nothing to delete!");
             return;
@@ -102,7 +103,7 @@ public class a_BasicDouble {
             return;
         }
 
-        DoublyLinkedList.node temp = head;
+        Node temp = head;
         // Move to last node
         while (temp.next != null) {
             temp = temp.next;
@@ -112,7 +113,7 @@ public class a_BasicDouble {
         temp.prev.next = null;
     }
 
-    public void deleteAtAnyIndex(int index){
+    public void deleteAtAnyIndex(int index) {
         if (head == null) {
             System.out.println("List is empty!");
             return;
@@ -129,7 +130,7 @@ public class a_BasicDouble {
             return;
         }
 
-        DoublyLinkedList.node temp = head;
+        Node temp = head;
         int count = 0;
 
         // Traverse to the given index
@@ -153,7 +154,8 @@ public class a_BasicDouble {
         temp.prev.next = temp.next;
         temp.next.prev = temp.prev;
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Node a = new Node(10);
         Node b = new Node(20);
         Node c = new Node(30);
@@ -180,11 +182,6 @@ public class a_BasicDouble {
 //        it is static method
 //        a_BasicDouble obj = new a_BasicDouble();
 //        obj.display(a);
-        display(a);
-        displayReverse(g);
-        displayRandom(c);  // print all items
-        Node newNode = insertAtHead(a,24);
-        display(newNode);
-    }
 
+    }
 }
