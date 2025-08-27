@@ -1,4 +1,4 @@
-package E_Stacks;
+package E_Stacks.A_CollectionFrameWork;
 
 import java.util.Stack;
 

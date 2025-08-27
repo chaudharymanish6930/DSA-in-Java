@@ -1,4 +1,4 @@
-package E_Stacks;
+package E_Stacks.B_UsingArray;
 
 import java.util.*;
 
