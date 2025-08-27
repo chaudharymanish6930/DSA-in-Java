@@ -26,5 +26,9 @@ public class b_DoublyLinkedListMethods {
         list.deleteAtAnyIndex(2);
         list.display();
 
+        System.out.println(list.getSize());
+
+        System.out.println(list.getElementAtIndex(2));
+
     }
 }
