@@ -7,7 +7,7 @@ public class b_usingArray {
     public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the size of stack: ");
+        System.out.print("Enter the size of stack: ");
         int size = scanner.nextInt();
 
         Stack stack = new Stack(size);
