@@ -22,11 +22,23 @@ public class a_AllMethods {
             size++;
         }
 
-        public void display(){
+        public void displayReverse(){
             Node temp = head;
             while(temp!=null){
                 System.out.print(temp.data+" ");
+                temp = temp.next;
             }
+            System.out.println();
+        }
+
+        void displayRec(Node temp){
+            if(temp == null) return;
+            displayRec(temp.next);
+            System.out.print(temp.data+" ");
+        }
+
+        void display(){
+            displayRec(head);
             System.out.println();
         }
 
@@ -60,6 +72,20 @@ public class a_AllMethods {
     }
 
     public static void main(String[] args) {
+        LLstack stack = new LLstack();
+
+        System.out.println("Stack checked: "+stack.isEmpty());
+
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+        stack.push(50);
+
+        stack.displayReverse();
+        stack.display();
+
+        System.out.println(stack.size());
 
     }
 }
