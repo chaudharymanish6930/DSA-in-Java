@@ -1,6 +1,6 @@
 package E_Stacks.C_UisngLinkedList;
-import java.util.*;
-public class a_LinkedList {
+
+public class Stack {
     // Node class for linked list
     private class Node {
         int data;
@@ -16,7 +16,7 @@ public class a_LinkedList {
     private int size;   // size of stack
 
     // Constructor
-    public gStackLinkedList() {
+    public Stack() {
         this.top = null;
         this.size = 0;
     }
@@ -78,24 +78,3 @@ public class a_LinkedList {
     }
 }
 
-
-// Main class to test Stack
-public class Main {
-    public static void main(String[] args) {
-        StackLinkedList stack = new StackLinkedList();
-
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-
-        stack.display();
-
-        System.out.println("Top element is: " + stack.peek());
-
-        stack.pop();
-        stack.display();
-
-        System.out.println("Stack size: " + stack.size());
-        System.out.println("Is stack empty? " + stack.isEmpty());
-    }
-}
