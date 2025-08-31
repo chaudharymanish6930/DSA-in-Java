@@ -22,12 +22,12 @@ public class Stack {
     }
 
     // Push element onto stack
-    public void push(int value) {
-        Node newNode = new Node(value);
+    public void push(int data) {
+        Node newNode = new Node(data);
         newNode.next = top;  // point new node to old top
         top = newNode;       // update top
         size++;
-        System.out.println(value + " pushed to stack");
+        System.out.println(data + " pushed to stack");
     }
 
     // Pop element from stack
