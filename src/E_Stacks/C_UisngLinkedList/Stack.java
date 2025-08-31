@@ -2,7 +2,7 @@ package E_Stacks.C_UisngLinkedList;
 
 public class Stack {
     // Node class for linked list
-    private class Node {
+     class Node {
         int data;
         Node next;
 
@@ -12,8 +12,8 @@ public class Stack {
         }
     }
 
-    private Node top;   // top of stack
-    private int size;   // size of stack
+    Node top;   // top of stack
+    int size;   // size of stack
 
     // Constructor
     public Stack() {
