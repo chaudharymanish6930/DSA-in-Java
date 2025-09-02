@@ -19,7 +19,7 @@ public class a_UsingLinkedList {
         System.out.println("Peek (element): " + queue.element()); // front, exception if empty
         System.out.println("Peek (peek): " + queue.peek());       // front, null if empty
 
-        // 3. Dequeue (remove / poll)
+           // 3. Dequeue (remove / poll)
         System.out.println("Removed (remove): " + queue.remove()); // removes head, exception if empty
         System.out.println("Removed (poll): " + queue.poll());     // removes head, null if empty
         System.out.println("Queue after removals: " + queue);
