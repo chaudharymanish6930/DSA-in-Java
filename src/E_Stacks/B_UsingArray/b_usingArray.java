@@ -12,7 +12,6 @@ public class b_usingArray {
 
         Stack stack = new Stack(size);
 
-
         while(true){
             System.out.println("\n----Stack menu----");
             System.out.println("1. Push");
