@@ -7,12 +7,12 @@ public class a_LinearQueue {
     int front, rear;
     int[] arr;
 
-//    LinearQueue(int size) {
-//        this.size = size;
-//        arr = new int[size];
-//        front = 0;
-//        rear = -1;
-//    }
+    a_LinearQueue(int size) {
+        this.size = size;
+        arr = new int[size];
+        front = 0;
+        rear = -1;
+    }
 
     // Enqueue (Insert)
     void enqueue(int value) {
@@ -48,17 +48,17 @@ public class a_LinearQueue {
     }
 }
 
-public class LinearQueueDemo {
+class LinearQueueDemo {
     public static void main(String[] args) {
-//        LinearQueue q = new LinearQueue(5);
-//
-//        q.enqueue(10);
-//        q.enqueue(20);
-//        q.enqueue(30);
-//
-//        q.display();
-//
-//        q.dequeue();
-//        q.display();
+        a_LinearQueue q = new a_LinearQueue(5);
+
+        q.enqueue(10);
+        q.enqueue(20);
+        q.enqueue(30);
+
+        q.display();
+
+        q.dequeue();
+        q.display();
     }
 }
