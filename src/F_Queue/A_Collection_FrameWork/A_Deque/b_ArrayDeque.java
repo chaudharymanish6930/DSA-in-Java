@@ -28,6 +28,7 @@ public class b_ArrayDeque {
         System.out.println("Peek last (peekLast): " + deque.peekLast());
 
         // 3. Removing elements
+
         System.out.println("Removed first (removeFirst): " + deque.removeFirst());
         System.out.println("Removed last (removeLast): " + deque.removeLast());
         System.out.println("Removed first (pollFirst): " + deque.pollFirst()); // null if empty
