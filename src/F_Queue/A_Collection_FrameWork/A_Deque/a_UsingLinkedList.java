@@ -7,6 +7,7 @@ public class a_UsingLinkedList {
         // Create a Queue using LinkedList
         Queue<Integer> queue = new LinkedList<>();
 
+        System.out.println(queue.isEmpty());
         // 1. Enqueue (add / offer)
         queue.add(10);   // throws exception if capacity full
         queue.add(20);
