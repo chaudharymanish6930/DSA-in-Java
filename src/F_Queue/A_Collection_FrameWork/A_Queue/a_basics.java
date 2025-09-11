@@ -11,5 +11,13 @@ public class a_basics {
         q.add(3);
         q.add(4);
         q.add(5);
+        System.out.println(q);
+        // rear-> 5 4 3 2 1 -> front
+        Queue<Integer> helper = new ArrayDeque<>();
+        while(q.size()>0){
+            System.out.print(q.peek()+" ");
+            helper.add(q.poll());
+        }
+        System.out.println(helper);
     }
 }
