@@ -1,4 +1,4 @@
-package F_Queue.A_Collection_FrameWork.B_Priority_Queue;
+package F_Queue.A_Collection_FrameWork.C_Priority_Queue;
 
 import java.util.*;
 

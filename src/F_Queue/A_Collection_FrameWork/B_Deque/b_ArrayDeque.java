@@ -1,4 +1,4 @@
-package F_Queue.A_Collection_FrameWork.A_Deque;
+package F_Queue.A_Collection_FrameWork.B_Deque;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
