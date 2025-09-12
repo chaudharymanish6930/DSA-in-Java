@@ -10,6 +10,7 @@ public class b_example {
         if(f == -1){
             f=0;
             r=0;
+            arr[0]=data;
         }
         else{
             arr[++r] = data;
@@ -64,5 +65,8 @@ public class b_example {
         queue.add(30);
         queue.add(40);
         queue.Display();
+        queue.remove();
+        queue.Display();
+        queue.peek();
     }
 }
