@@ -44,13 +44,23 @@ public class a_basics {
                 return x;
             }
         }
-        public static void Display(){
+        public void Display(){
             if(size==0){
-
+                System.out.println("Queue is empty!!");
+            }
+            Node temp = head;
+            while(temp != null){
+                System.out.print(temp.data+" ");
+                temp= temp.next;
             }
         }
     }
     public static void main(String[] args) {
-
-    }
+            queuell q1 = new queuell();
+            q1.Display();
+            q1.add(10);
+            q1.add(20);
+            q1.add(30);
+            q1.Display();
+            }
 }
