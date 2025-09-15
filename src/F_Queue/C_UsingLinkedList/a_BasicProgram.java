@@ -1,5 +1,5 @@
 package F_Queue.C_UsingLinkedList;
-public class a_basics {
+public class a_BasicProgram {
     public static class Node{
         int data;
         Node next;
