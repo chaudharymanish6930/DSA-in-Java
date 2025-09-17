@@ -13,7 +13,7 @@ public class a_ImplementationInArray {
                 arr[0]=data;
             }
             else if (size == arr.length) {
-                System.out.println("queue is empty");
+                System.out.println("queue is full not more added!!");
             }
             else if(rear < arr.length-1){
                 arr[++rear] =data;
@@ -57,15 +57,15 @@ public class a_ImplementationInArray {
             }
             else if(front<=rear){
                 for(int i=front; i<=rear; i++){
-                    System.out.println(arr[i]+" ");
+                    System.out.print(arr[i]+" ");
                 }
             }
             else{ // rear < front
                 for(int i=front; i<=arr.length; i++){
-                    System.out.println(arr[i]+" ");
+                    System.out.print(arr[i]+" ");
                 }
                 for(int i=0; i<=rear; i++){
-                    System.out.println(arr[i]+" ");
+                    System.out.print(arr[i]+" ");
                 }
             }
             System.out.println();
@@ -75,6 +75,18 @@ public class a_ImplementationInArray {
         QueueArray queue = new QueueArray();
         queue.Display();
         queue.add(10);
+        queue.Display();
+        queue.add(20);
+        queue.add(30);
+        queue.add(40);
+        queue.add(50);
+        queue.Display();
+        queue.add(60);
+        queue.remove();
+        queue.remove();
+        queue.Display();
+        queue.add(60);
+//        queue.add(70);
         queue.Display();
     }
 }
