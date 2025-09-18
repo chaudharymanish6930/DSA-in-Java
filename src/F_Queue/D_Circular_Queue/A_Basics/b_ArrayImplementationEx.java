@@ -1,4 +1,4 @@
-package F_Queue.D_Circular_Queue;
+package F_Queue.D_Circular_Queue.A_Basics;
 
 public class b_ArrayImplementationEx {
     public static class QueueArray{
@@ -86,7 +86,7 @@ public class b_ArrayImplementationEx {
         queue.remove();
         queue.Display();
         queue.add(60);
-//        queue.add(70);
+        queue.add(70);
         queue.Display();
 
     }

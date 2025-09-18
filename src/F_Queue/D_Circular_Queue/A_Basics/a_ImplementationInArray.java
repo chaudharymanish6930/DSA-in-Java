@@ -1,4 +1,4 @@
-package F_Queue.D_Circular_Queue;
+package F_Queue.D_Circular_Queue.A_Basics;
 
 public class a_ImplementationInArray {
     public static class QueueArray{
