@@ -1,6 +1,6 @@
 package F_Queue.D_Circular_Queue;
 
-public class a_ImplementationInArray {
+public class b_ArrayImplementationEx {
     public static class QueueArray{
         int front =-1;
         int rear = -1;
@@ -72,7 +72,7 @@ public class a_ImplementationInArray {
         }
     }
     public static void main(String[] args) {
-        QueueArray queue = new QueueArray();
+        a_ImplementationInArray.QueueArray queue = new a_ImplementationInArray.QueueArray();
         queue.Display();
         queue.add(10);
         queue.Display();
@@ -88,8 +88,6 @@ public class a_ImplementationInArray {
         queue.add(60);
 //        queue.add(70);
         queue.Display();
-        for(int i=0; i<queue.arr.length; i++){
-            System.out.println(queue.arr[i]+" ");
-        }
+
     }
 }
