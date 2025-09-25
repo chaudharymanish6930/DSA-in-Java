@@ -32,6 +32,7 @@ class Students {
     }
 
     void Display(){
+        System.out.println("Student detail ");
         System.out.println("Id :"+Id);
         System.out.println("Name :"+ Name);
         System.out.println("Age :"+Age);
@@ -40,10 +41,11 @@ class Students {
 }
 
 public class StudentManagementSystem{
-    private static Students[] students = new Students[100];
+    private static Students[] students = new Students[4];
     private static int count = 0;
-    private static Scanner scanner= new Scanner(System.in);
+    static Scanner scanner= new Scanner(System.in);
     public static void main(String[] args) {
+        int choice;
 
         do{
             System.out.println("---welcome to the my Student Management---");
@@ -54,8 +56,7 @@ public class StudentManagementSystem{
             System.out.println("5. Delete Student");
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
-
-            int choice= scanner.nextInt();
+            choice= scanner.nextInt();
             scanner.nextLine();
 
             switch (choice){
@@ -70,6 +71,7 @@ public class StudentManagementSystem{
                         String name = scanner.nextLine();
                         System.out.println("Enter age :");
                         int age = scanner.nextInt();
+                        scanner.nextLine();
                         System.out.println("Enter Course :");
                         String course = scanner.nextLine();
 
@@ -87,7 +89,7 @@ public class StudentManagementSystem{
                     else {
                         System.out.println("Students Records...");
                         for (int i = 0; i < count; i++) {
-                            students[count].Display();
+                            students[i].Display();
                         }
                     }
                     break;
@@ -104,10 +106,11 @@ public class StudentManagementSystem{
                             break;
                         }
                     }
-                    if(found){
+                    if(!found){
                         System.out.println("Student is not found");
                     }
                     break;
+
                 case 4:
                     System.out.println("Update Students....");
                     System.out.println("Enter Id to Update :");
@@ -119,6 +122,7 @@ public class StudentManagementSystem{
                             String name = scanner.nextLine();
                             System.out.println("Enter new age :");
                             int age = scanner.nextInt();
+                            scanner.nextLine();
                             System.out.println("Enter new Course :");
                             String course = scanner.nextLine();
 
@@ -128,6 +132,8 @@ public class StudentManagementSystem{
                         }
                     }
                     System.out.println("Not Found");
+                    break;
+
                 case 5:
                     System.out.println("Enter deleted Student id :");
                     String delId = scanner.nextLine();
@@ -144,10 +150,19 @@ public class StudentManagementSystem{
                             break;
                         }
                     }
+                    if(!deleted){
+                        System.out.println("Student not found!!");
+                    }
+                    break;
+
+                case 6:
+                    System.out.println("Exiting...  Good Bye");
+                    break;
+
+                default:
+                    System.out.println("Invalid Output!!");
             }
-
-        }
-        while();
-
+        } while(choice !=6);
+        scanner.close();
     }
 }
