@@ -32,15 +32,15 @@ public class a_BasicsCollections {
 
         // put method for update and inserts in the hashmap
         // update Apple to Tomato
-        map.put(1,"Tomato");
+        map.put(1, "Tomato");
         System.out.println(map);
 
         // insert new values
-        System.out.println(map.put(5,"Brinjal"));  // nulll
+        System.out.println(map.put(5, "Brinjal"));  // nulll
         System.out.println(map);
 
-        System.out.println(map.putIfAbsent(1,"Apple")); // Tomato
-        System.out.println(map.putIfAbsent(2,"Apple"));  // Banana
+        System.out.println(map.putIfAbsent(1, "Apple")); // Tomato
+        System.out.println(map.putIfAbsent(2, "Apple"));  // Banana
 
         // all keys in map
         System.out.println(map.keySet());
@@ -52,11 +52,11 @@ public class a_BasicsCollections {
         System.out.println(map.entrySet());  // in list form
 
         // traverse the all entries of the hasmap -- multiple methods
-        for(Integer key: map.keySet()){
+        for (Integer key : map.keySet()) {
             System.out.println(key);
         }
 
-        for(String Value: map.values()){
+        for (String Value : map.values()) {
             System.out.println(Value);
         }
     }
