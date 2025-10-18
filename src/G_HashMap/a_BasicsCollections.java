@@ -59,5 +59,6 @@ public class a_BasicsCollections {
         for (String Value : map.values()) {
             System.out.println(Value);
         }
+
     }
 }
