@@ -183,6 +183,7 @@ public class d_FullProgramWithMethod {
         list.printList();
 
 //        list.inserAt(4,100);
+
 //      list.printList();  // invalid output
         list.inserAt(2,200);
         list.inserAt(3,300);
@@ -192,6 +193,5 @@ public class d_FullProgramWithMethod {
         list.printList();
 
         System.out.println(list.size);
-
     }
 }
