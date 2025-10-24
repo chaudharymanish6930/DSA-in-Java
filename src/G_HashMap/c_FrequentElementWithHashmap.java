@@ -25,7 +25,7 @@ public class c_FrequentElementWithHashmap {
         // HashMap Concept is here
         Map<Integer,Integer> freq = new HashMap<Integer, Integer>();
         for(int el:arr){
-            if(!freq.containsKey(el)){
+            if(!freq.containsKey(el)){   // reverse the condition
                 freq.put(el,1);
             }
             else{
@@ -35,6 +35,8 @@ public class c_FrequentElementWithHashmap {
 
         System.out.println("Frequency Map: ");
         System.out.println(freq.entrySet());
+
+
         int maxfre =0;
         int anskey = -1;
         for(var e: freq.entrySet()){
