@@ -37,12 +37,23 @@ public class c_FrequentElementWithHashmap {
         System.out.println(freq.entrySet());
         int maxfre =0;
         int anskey = -1;
-        for(var e:freq.entrySet()){
+        for(var e: freq.entrySet()){
             if(e.getValue()>maxfre){
                 maxfre = e.getValue();
                 anskey = e.getKey();
             }
         }
-        System.out.println(anskey);
+        System.out.printf("%d has max freq. and it ocuurs %d times\n\n",anskey,maxfre);
+
+        // second method to achivevd this
+        maxfre =0;
+        anskey = -1;
+        for(var key:freq.keySet()){
+            if(freq.get(key)>maxfre){
+                maxfre= freq.get(key);
+                anskey=key;
+            }
+        }
+        System.out.printf("%d has max freq. and it ocuurs %d times",anskey,maxfre);
     }
 }
