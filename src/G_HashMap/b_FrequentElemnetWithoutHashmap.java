@@ -35,7 +35,7 @@ public class b_FrequentElemnetWithoutHashmap {
         for(int i:arr){
             System.out.print(i+" ");
         }
-        // both does same work in this code
+        //   both does same work in this code
         //  for(int i=0; i<length; i++){
         //      System.out.print(arr[i]+" ");
         //  }
