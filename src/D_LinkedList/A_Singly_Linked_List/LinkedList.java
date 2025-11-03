@@ -43,8 +43,8 @@ public class LinkedList {
 
     public void addLast(int data){
         node newNode = new node(data);
-        node currNode = head;
 
+        node currNode = head;
         if(head == null){
             head = newNode;
             return;
