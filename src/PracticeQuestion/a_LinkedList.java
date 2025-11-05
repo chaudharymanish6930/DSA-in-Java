@@ -86,12 +86,26 @@ class SinglyLinkedList{
         temp.next=null;
     }
 
-    public void deleteAt(int index){
-        if(index<=0){
-            System.out.println("List is empty!!");
-        }
+//    public void deleteAt(int index){
+//        if(head==null) return;
+//
+//        if (index == 0) {
+//            head = head.next;
+//            return;
+//        }
+//
+//        node temp=head;
+//        for(int i=0; temp!=null && i<index-1; i++){
+//            temp = temp.next;
+//        }
+//
+//        if(temp==null || temp.next==null){
+//            return;
+//        }
+//         temp.next = temp.next.next;
+//    }
 
-    }
+//    public
 }
 public class a_LinkedList {
     public static void main(String[] args) {
