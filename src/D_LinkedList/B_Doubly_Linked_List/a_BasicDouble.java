@@ -195,8 +195,5 @@ public class a_BasicDouble {
         list.deleteAtAnyIndex(2);
         list.display();
 
-
-
-
     }
 }
