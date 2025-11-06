@@ -11,6 +11,7 @@ class node{
 
 class SinglyLinkedList{
     node head;
+    node tail;
     public void add(int data){
         node NewNode = new node(data);
         node temp=head;

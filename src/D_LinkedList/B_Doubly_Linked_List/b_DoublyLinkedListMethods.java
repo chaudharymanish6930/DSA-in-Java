@@ -29,6 +29,5 @@ public class b_DoublyLinkedListMethods {
         System.out.println(list.getSize());
 
         System.out.println(list.getElementAtIndex(2));
-
     }
 }

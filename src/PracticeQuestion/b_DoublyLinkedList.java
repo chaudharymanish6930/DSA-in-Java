@@ -99,6 +99,34 @@ class DoublyLinkedList {
         }
         System.out.println("null");
     }
+
+    public void insertAtPosition(int data, int index){
+        Node NewNode = new Node(data);
+        Node temp = head;
+        if(index<0){
+            System.out.println("Give a valid input");
+            return;
+        }
+        else if(index== 0){
+            head = NewNode;
+            tail = NewNode;
+            return;
+        }
+        else{
+            for(int i=0; i<index-1; i++) {
+                temp = temp.next;
+            }
+            temp.next = NewNode;
+            NewNode.next = temp.next.next;
+            NewNode.prev = temp;
+            temp.next.prev = NewNode;
+
+            temp.next.prev = NewNode;
+            NewNode.prev = temp;
+            NewNode.next = temp.next;
+            temp.next = NewNode;
+        }
+    }
 }
 
 public class b_DoublyLinkedList {
