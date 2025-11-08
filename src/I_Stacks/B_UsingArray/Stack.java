@@ -1,4 +1,4 @@
-package E_Stacks.B_UsingArray;
+package I_Stacks.B_UsingArray;
 
 public class Stack {
     private int maxSize;   // maximum size of stack

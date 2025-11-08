@@ -1,7 +1,6 @@
-package E_Stacks.A_CollectionFrameWork;
+package I_Stacks.A_CollectionFrameWork;
 
 import java.util.Stack;
-import java.util.*;
 
 public class d_InsertAtAnyIndex {
     public static void main(String[] args) {

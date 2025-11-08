@@ -1,4 +1,4 @@
-package E_Stacks.C_UisngLinkedList;
+package I_Stacks.C_UisngLinkedList;
 
 public class a_AllMethods {
 
