@@ -30,9 +30,23 @@ class CircularSinglyLinkedList{
     }
 
     public void InsertLast(int data){
-
+        nodee newNode = new nodee(data);
+        if(head==null){
+            head = newNode;
+            tail = newNode;
+            tail.next = head;
+            return;
+        }
+        else{
+            newNode.next=tail;
+            tail.next=newNode;
+            tail = newNode;
+        }
     }
 
+    public void DisplayElement(){
+        nodee temp;
+    }
 }
 public class c_CircularSinglyLinkedList {
 
