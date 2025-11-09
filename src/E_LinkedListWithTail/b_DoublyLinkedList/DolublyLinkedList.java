@@ -13,7 +13,20 @@ class node{
 }
 
 class DoubleLinkedList{
+    node head = null;
+    node tail = null;
+    public void addfirst(int data){
+        node NewNode = new node(data);
+        if(head==null || tail==null){
+            head = NewNode;
+            tail = NewNode;
+            return;
+        }
 
+        NewNode.next = head;
+        head.prev = NewNode;
+        head =NewNode;
+    }
 }
 public class DolublyLinkedList {
     public static void main(String[] args) {
