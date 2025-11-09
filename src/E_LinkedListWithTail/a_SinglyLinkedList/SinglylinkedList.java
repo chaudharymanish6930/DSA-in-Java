@@ -83,7 +83,7 @@ class SingleLinkedList{
             return;
         }
         node temp=tail;
-        while(temp)
+//        while(temp)
     }
     public void deleteFirst(){
         if(head==null){
