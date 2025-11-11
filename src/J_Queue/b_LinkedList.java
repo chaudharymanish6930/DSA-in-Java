@@ -24,15 +24,36 @@ class Queue{
     }
 
     public void remove(){
-
+        if(front == null || rear == null){
+            System.out.println("Queue is Empty");
+            return;
+        }
+        front = front.next;
     }
 
     public boolean isEmpty() {
-        return front == -1;
+        return front == null;
     }
 
-    public
+    public int peek(){
+        return rear.data;
+    }
+
+    public void Display(){
+        if(front ==null){
+            System.out.println("Queue is Empty!");
+            return;
+        }
+        node temp;
+        temp = front;
+        while(temp!=null){
+            System.out.println(temp.data+" ");
+            temp=temp.next;
+        }
+    }
 }
 public class b_LinkedList {
+    public static void main(String[] args) {
 
+    }
 }
