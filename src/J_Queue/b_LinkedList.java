@@ -47,13 +47,18 @@ class Queue{
         node temp;
         temp = front;
         while(temp!=null){
-            System.out.println(temp.data+" ");
+            System.out.print(temp.data+" -> ");
             temp=temp.next;
         }
     }
 }
 public class b_LinkedList {
     public static void main(String[] args) {
-
+        Queue q1= new Queue();
+        q1.Display();
+        q1.add(10);
+        q1.add(20);
+        q1.add(30);
+        q1.Display();
     }
 }
