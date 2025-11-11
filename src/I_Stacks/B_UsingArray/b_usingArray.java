@@ -1,6 +1,6 @@
 package I_Stacks.B_UsingArray;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class b_usingArray {
 
