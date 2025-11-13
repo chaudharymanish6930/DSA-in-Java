@@ -27,8 +27,7 @@ public class a_ImplementationInArray {
 
         public int remove(){
             if(size ==0){
-                System.out.println("Queue is empty");
-                size--;
+                System.out.println("Queue is Empty");
                 return -1;
             }
             else if(front == arr.length-1){

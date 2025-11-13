@@ -13,7 +13,7 @@ public class b_ArrayImplementationEx {
                 arr[0]=data;
             }
             else if (size == arr.length) {
-                System.out.println("queue is full not more added!!");
+                System.out.println("Queue is full not more added!!");
             }
             else if(rear < arr.length-1){
                 arr[++rear] =data;

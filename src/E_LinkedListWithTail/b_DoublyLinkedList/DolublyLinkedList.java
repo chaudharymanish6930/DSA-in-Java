@@ -43,6 +43,24 @@ class DoubleLinkedList{
         tail=NewNode;
     }
 
+    public void deleteFirst(){
+        if(head==null){
+            System.out.println("List is Empty");
+            return;
+        }
+
+        head=head.next;
+    }
+
+    public void deleteLast(){
+        if(head==null){
+            System.out.println("List is Empty");
+            return;
+        }
+
+        tail= tail.prev;
+    }
+
     public void Display(){
         if(head==null || tail==null){
             System.out.println("The Linked List is Empty");
@@ -62,6 +80,16 @@ public class DolublyLinkedList {
         DoubleLinkedList List = new DoubleLinkedList();
         List.addfirst(10);
         List.addfirst(20);
+        List.Display();
+        List.addfirst(30);
+        List.Display();
+        List.addLast(40);
+        List.Display();
+        List.addLast(100);
+        List.Display();
+        List.deleteFirst();
+        List.Display();
+        List.deleteLast();
         List.Display();
     }
 }
