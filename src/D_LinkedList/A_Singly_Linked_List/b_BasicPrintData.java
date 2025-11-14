@@ -27,6 +27,7 @@ public class b_BasicPrintData {
         f.next = g;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70
 
         // data print by using for loop
+        // here size id directly countable....
         node temp;
         temp = a;
         for(int i =1; i <= 7; i++ ){
@@ -43,6 +44,5 @@ public class b_BasicPrintData {
             temp = temp.next;
         }
         System.out.println("Null");
-
     }
 }

@@ -11,31 +11,47 @@ public class c_PrintDatabyDisplay {
         }
     }
 
+    public void Display(node head){
+        // head access is lost
+        node temp=head;
+        while(temp != null){
+            System.out.print(temp.data+" -> ");
+            temp = temp.next;
+        }
+    }
+
+    public void DisplayReverse(node head){
+        if(head == null) return;
+        node NewNext=null;
+        node prev=null;
+        node current = head;
+
+        while(current!=null){
+            NewNext=current.next;
+            current.next =prev;
+            prev=current;
+            current=NewNext;
+        }
+
+        node temp=prev;
+        while(temp!=null){
+            System.out.print(temp.data+" <- ");
+            temp=temp.next;
+        }
+    }
+
     public  void DisplayRecursive(node head){
         if(head == null) return;
         System.out.print(head.data+" -> ");
         DisplayRecursive(head.next);
     }
 
-    public void Display(node head){
-        while(head != null){
-            System.out.print(head.data+" -> ");
-            head = head.next;
-        }
-    }
-
-    public void DisplayReverse(node head){
-        if(head == null) return;
-
-        DisplayRecursive(head.next);
-        System.out.print(head.data+" -> ");
-    }
-
     public int length(node head){
         int count =0;
-        while(head != null){
+        node temp=head;
+        while(temp != null){
             count++;
-            head = head.next;
+            temp = temp.next;
         }
         return count;
     }
@@ -55,6 +71,7 @@ public class c_PrintDatabyDisplay {
         d.next = e;  // 10 -> 20 -> 30 -> 40 -> 50
         e.next = f;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60
         f.next = g;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70
+        // finally the linked list output:: // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70 -> Null
 
         // display and displayRecursive
         c_PrintDatabyDisplay obj= new c_PrintDatabyDisplay();

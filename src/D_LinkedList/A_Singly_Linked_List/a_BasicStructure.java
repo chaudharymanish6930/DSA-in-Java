@@ -35,7 +35,7 @@ public class a_BasicStructure {
 
         node e = new node(5);
         d.next = e;
-
+        System.out.println(a.data);
         System.out.println(a.next.data);  // 2
         System.out.println(a.next.next.data);  // 3
         System.out.println(a.next.next.next.data);  // 4

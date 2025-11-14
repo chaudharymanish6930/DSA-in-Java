@@ -55,7 +55,6 @@ public class d_FullProgramWithMethod {
         while(currNode.next != null){
             currNode = currNode.next;
         }
-
         currNode.next = newNode;
         size++;
     }
@@ -81,14 +80,22 @@ public class d_FullProgramWithMethod {
             size--;
             return;
         }
+//        first method....
+//        node secondLast = head;
+//        node lastNode = head.next;
+//        while(lastNode.next != null){
+//            lastNode = lastNode.next;
+//            secondLast = secondLast.next;
+//        }
+//        secondLast.next = null;
 
-        node secondLast = head;   // head hain yaha
-        node lastNode = head.next;  // head ka next yaha (null)
-        while(lastNode.next != null){  // null nahi toh
-            lastNode = lastNode.next;
-            secondLast = secondLast.next;
+        node temp = head;
+        // Stop at the second-last node
+        while (temp.next.next != null) {
+            temp = temp.next;
         }
-        secondLast.next = null;
+
+        temp.next = null;  // Delete last node
         size--;
     }
 
