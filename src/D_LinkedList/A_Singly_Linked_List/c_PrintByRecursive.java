@@ -13,15 +13,24 @@ public class c_PrintByRecursive {
 
     public void Display(node head){
         // head access is lost
+        if(head==null){
+            System.out.println("List is Empty!!");
+            return;
+        }
+
+        System.out.println("Simple Display :");
         node temp=head;
         while(temp != null){
             System.out.print(temp.data+" -> ");
             temp = temp.next;
         }
+        System.out.println("Null\n");
     }
 
     public void DisplayReverse(node head){
         if(head == null) return;
+
+        System.out.println("by Reverse Function :");
         node NewNext=null;
         node prev=null;
         node current = head;
@@ -38,10 +47,12 @@ public class c_PrintByRecursive {
             System.out.print(temp.data+" <- ");
             temp=temp.next;
         }
+        System.out.println("Null\n");
     }
 
     public  void DisplayRecursive(node head){
         if(head == null) return;
+
         System.out.print(head.data+" -> ");
         DisplayRecursive(head.next);
     }
@@ -73,17 +84,15 @@ public class c_PrintByRecursive {
         f.next = g;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70
         // finally the linked list output:: // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70 -> Null
 
-        // display and displayRecursive
         c_PrintByRecursive obj= new c_PrintByRecursive();
         obj.Display(a);
-        System.out.println("Null");
 
+        System.out.println("By Recursive Function :");
         obj.DisplayRecursive(a);
-        System.out.println("Null");
+        System.out.println("Null\n");
 
         obj.DisplayReverse(a);
-        System.out.println("Null");
 
-        System.out.println(obj.length(a));
+        System.out.println("Length of the list (Reverse function) :"+"\n"+obj.length(g));
     }
 }

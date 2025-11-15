@@ -90,7 +90,6 @@ public class d_FullProgramWithMethod {
 //        secondLast.next = null;
 
         node temp = head;
-        // Stop at the second-last node
         while (temp.next.next != null) {
             temp = temp.next;
         }
@@ -115,7 +114,7 @@ public class d_FullProgramWithMethod {
 
     public void inserAt(int index,int data){
         node newNode  = new node(data);
-        node temp = head;
+
         if(index == size){
             addLast(data);
             size++;
@@ -127,8 +126,11 @@ public class d_FullProgramWithMethod {
             return ;
         }
         else if(index < 0 || index > size){
-            System.out.println("your input is invalis");
+            System.out.println("your input is invalid");
+            return;
         }
+
+        node temp = head;
         for(int i=1; i<=index-1; i++){
             temp =temp.next;
         }
@@ -187,7 +189,8 @@ public class d_FullProgramWithMethod {
         list.deleteLast();
         list.printList();
 
-//        list.inserAt(4,100);
+        list.add(50);
+        list.add(60);
 
 //      list.printList();  // invalid output
         list.inserAt(2,200);

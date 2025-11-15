@@ -121,7 +121,6 @@ public class LinkedList {
 
     public void inserAt(int index,int data){
         node newNode  = new node(data);
-        node temp = head;
         if(index == getSize()){
             addLast(data);
             return;
@@ -133,11 +132,13 @@ public class LinkedList {
         else if(index < 0 || index > getSize()){
             System.out.println("your input is invalid");
         }
+
+        node temp = head;
         for(int i=1; i<=index-1; i++){
             temp =temp.next;
         }
-        newNode.next = temp.next;   // newNode  -> next <- temp
-        temp.next = newNode;
+        newNode.next = temp.next;   // newNode  -> temp
+        temp.next = newNode;        // temp -> NewNode
     }
 
     public int getElementAt(int index){
@@ -161,16 +162,6 @@ public class LinkedList {
             temp = temp.next;
         }
         temp.next = temp.next.next;
-
-        /*
-        for you have a tail of the linked list
-        then you assign the last element to the tail
-        like::
-        if(index == size-1){
-            tail.temp;
-        }
-        at the end size--
-         */
     }
 
     public void ReverseList(){
