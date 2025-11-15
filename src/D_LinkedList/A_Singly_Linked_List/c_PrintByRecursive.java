@@ -1,6 +1,6 @@
 package D_LinkedList.A_Singly_Linked_List;
 
-public class c_PrintDatabyDisplay {
+public class c_PrintByRecursive {
     public static class node{
         int data;
         node next;
@@ -74,7 +74,7 @@ public class c_PrintDatabyDisplay {
         // finally the linked list output:: // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70 -> Null
 
         // display and displayRecursive
-        c_PrintDatabyDisplay obj= new c_PrintDatabyDisplay();
+        c_PrintByRecursive obj= new c_PrintByRecursive();
         obj.Display(a);
         System.out.println("Null");
 

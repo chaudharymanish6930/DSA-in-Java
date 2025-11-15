@@ -113,8 +113,6 @@ public class d_FullProgramWithMethod {
         System.out.println("Null");
     }
 
-
-
     public void inserAt(int index,int data){
         node newNode  = new node(data);
         node temp = head;

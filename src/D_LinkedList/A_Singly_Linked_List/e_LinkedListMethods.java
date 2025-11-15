@@ -34,5 +34,7 @@ public class e_LinkedListMethods {
 
         System.out.println(num.getElementAt(2));
 
+        num.ReverseList();
+        num.printvalue();
     }
 }

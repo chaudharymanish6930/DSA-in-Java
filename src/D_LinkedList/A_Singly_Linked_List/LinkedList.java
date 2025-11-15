@@ -101,13 +101,22 @@ public class LinkedList {
             return;
         }
 
-        node secondLast = head;   // head hain yaha
-        node lastNode = head.next;  // head ka next yaha (null)
-        while(lastNode.next != null){  // null nahi toh
-            lastNode = lastNode.next;
-            secondLast = secondLast.next;
+//        node secondLast = head;   // head hain yaha
+//        node lastNode = head.next;  // head ka next yaha (null)
+//        while(lastNode.next != null){  // null nahi toh
+//            lastNode = lastNode.next;
+//            secondLast = secondLast.next;
+//        }
+//        secondLast.next = null;
+
+        node temp = head;
+        while(temp.next.next!=null){
+            temp=temp.next;
         }
-        secondLast.next = null;
+
+        temp =temp.next;
+        temp.next=null;
+
     }
 
     public void inserAt(int index,int data){
@@ -162,5 +171,29 @@ public class LinkedList {
         }
         at the end size--
          */
+    }
+
+    public void ReverseList(){
+        if(head==null){
+            System.out.println("List is Empty");
+            return;
+        }
+
+        node prev = null;
+        node current = head;
+        node nextNode=null;
+
+        while(current!=null){
+            nextNode = current.next;
+            current.next=prev;
+            prev=current;
+            current=nextNode;
+        }
+
+        node temp=prev;
+        while(temp!=null){
+            System.out.print(temp.data);
+            temp=temp.next;
+        }
     }
 }
