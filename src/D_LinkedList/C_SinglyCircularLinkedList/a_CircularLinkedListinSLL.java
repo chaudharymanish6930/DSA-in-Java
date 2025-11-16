@@ -1,4 +1,4 @@
-package D_LinkedList.C_CircularLinkedList;
+package D_LinkedList.C_SinglyCircularLinkedList;
 
 public class a_CircularLinkedListinSLL {
     // Node structure

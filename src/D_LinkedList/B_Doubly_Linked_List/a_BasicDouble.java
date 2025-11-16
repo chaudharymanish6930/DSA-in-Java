@@ -3,6 +3,7 @@ package D_LinkedList.B_Doubly_Linked_List;
 public class a_BasicDouble {
     Node head;
     Node tail;
+    int size;
 
     public static class Node {
         int data;
@@ -18,31 +19,61 @@ public class a_BasicDouble {
 
     public void insertAtHead(int data) {
         Node newNode = new Node(data);
-        Node temp = head;
-        newNode.next = temp;
-        head = newNode;
+        if(head==null){
+            head=tail=newNode;
+            return;
+        }
+
+        // if List is not empty
+        newNode.next = head;
+        head.prev = newNode;
+        head=newNode;
     }
 
     public void insertAtTail(int data) {
         Node newNode = new Node(data);
-        Node temp = head;
-        while (temp.next != null) {
-            temp = temp.next;
+        if(head==null){
+            head=tail=newNode;
+            return;
         }
-        temp.next = newNode;
-        newNode.prev = temp;
+
+        tail.next = newNode;
+        newNode.prev = tail;
+        tail = newNode;
     }
 
     public void insertAtAnyIndex(int data, int index) {
         Node newNode = new Node(data);
+
+        if(index<0 || index>size){
+            System.out.println("Invalid Input!!");
+            return;
+        }
+
+        if(index==0){
+            insertAtHead(data);
+            size++;
+            return;
+        }
+
+        if(index==size){
+            insertAtTail(data);
+            size++;
+            return;
+        }
+
         Node temp = head;
         for (int i = 1; i <= index - 1; i++) {
             temp = temp.next;
         }
-        temp.next.prev = newNode;
-        newNode.prev = temp;
-        newNode.next = temp.next;
-        temp.next = newNode;
+
+        // Middle insertion
+        newNode.next = temp.next;   // newNode → node at index
+        newNode.prev = temp;        // newNode ← temp
+        temp.next.prev = newNode;   // link back to newNode
+        temp.next = newNode;        // temp → newNode
+
+        size++;
     }
 
     public void display() {
