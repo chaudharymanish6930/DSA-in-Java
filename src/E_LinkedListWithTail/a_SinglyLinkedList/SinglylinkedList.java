@@ -89,6 +89,7 @@ class SingleLinkedList{
             prev = curr;
             curr = next;
         }
+
         tail =head;
         head = prev;
         node temp=head;
