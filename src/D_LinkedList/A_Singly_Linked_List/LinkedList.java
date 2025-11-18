@@ -62,6 +62,7 @@ public class LinkedList {
             System.out.println("list is empty");
             return;
         }
+        
         node currNode = head;
         while(currNode != null){
             System.out.print(currNode.data+"-> ");
