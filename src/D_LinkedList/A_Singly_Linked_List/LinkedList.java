@@ -8,6 +8,7 @@ class node{
         this.data=data;
         this.next=null;
     }
+
 }
 
 public class LinkedList {
