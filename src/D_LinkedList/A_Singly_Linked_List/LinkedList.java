@@ -181,11 +181,10 @@ public class LinkedList {
             current=nextNode;
         }
 
-
         node temp=prev;
         while(temp!=null){
             System.out.print(temp.data);
             temp=temp.next;
         }
     }
-}+
+}
