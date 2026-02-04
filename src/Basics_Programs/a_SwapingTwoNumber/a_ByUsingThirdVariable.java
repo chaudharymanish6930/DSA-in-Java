@@ -11,5 +11,6 @@ public class a_ByUsingThirdVariable {
         a=b;
         b=z;
         System.out.print("\nAfter Swaping a="+a+" and b="+b);
+        // Store one value safely → swap → put back.
     }
 }

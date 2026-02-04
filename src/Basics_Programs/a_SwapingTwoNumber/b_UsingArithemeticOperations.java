@@ -10,5 +10,6 @@ public class b_UsingArithemeticOperations {
         y=x-y;
         x=x-y;
         System.out.print("\nAfter Swaping a="+x+" and b="+y);
+      //  Can cause integer overflow if numbers are large.
     }
 }
