@@ -1,6 +1,6 @@
 package D_LinkedList.A_Singly_Linked_List;
 
-public class c_PrintByRecursive {
+public class c_MethodsToAccessTheData {
     public static class node{
         int data;
         node next;
@@ -84,7 +84,7 @@ public class c_PrintByRecursive {
         f.next = g;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70
         // finally the linked list output:: // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70 -> Null
 
-        c_PrintByRecursive obj= new c_PrintByRecursive();
+        c_MethodsToAccessTheData obj= new c_MethodsToAccessTheData();
         obj.Display(a);
 
         System.out.println("By Recursive Function :");

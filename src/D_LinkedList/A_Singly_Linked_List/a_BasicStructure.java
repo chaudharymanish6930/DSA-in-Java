@@ -27,6 +27,7 @@ public class a_BasicStructure {
         b.next =c;
         System.out.println(c);     // $node@a09ee92
         System.out.println(b.next);   // $node@a09ee92
+        System.out.println(a.next);
         System.out.println(c.data);   // 3
         System.out.println(c.next);    // null
 
