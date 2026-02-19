@@ -16,13 +16,18 @@ public class f_PalindromeLinkedList {
         d.next = e;  // 10 -> 20 -> 30 -> 40 -> 50
         e.next = f;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60
         f.next = g;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70
+        node temp=a;
+        while(temp!=null){
+            System.out.println(temp.data);
+            temp=temp.next;
+        }
         f_PalindromeLinkedList list= new f_PalindromeLinkedList();
         list.isPalindrome(a);
         System.out.println(list.isPalindrome(a));
     }
 
     public boolean isPalindrome(node  head) {
-        while(head==null || head.next==null){
+        if(head==null || head.next==null){
             return true;
         }
         node  slow=head;
@@ -31,7 +36,7 @@ public class f_PalindromeLinkedList {
             slow =slow.next;
             fast=fast.next.next;
         }
-
+        System.out.println(slow.data);
         node  curr=slow;
         node  prev=null;
         node  next=null;
@@ -45,30 +50,35 @@ public class f_PalindromeLinkedList {
         node  left=head;
         node  right=prev;
         while(right!=null){
-            if(left.data!=right.data){
+            if(right.data!=left.data){
                 return false;
             }
             left=left.next;
             right=right.next;
         }
-
-        // Restore the whole linked list
-        curr=slow;
-        prev=null;
-        next=null;
-        while(curr!=null){
-            next=curr.next;
-            curr.next=prev;
-            prev=curr;
-            curr=next;
-        }
-
         node temp=head;
         while(temp!=null){
             System.out.println(temp.data);
             temp=temp.next;
         }
+return true;
+        // Restore the whole linked list
+//        curr=slow;
+//        prev=null;
+//        next=null;
+//        while(curr!=null){
+//            next=curr.next;
+//            curr.next=prev;
+//            prev=curr;
+//            curr=next;
+//        }
 
-        return true;
+//        node temp=head;
+//        while(temp!=null){
+//            System.out.println(temp.data);
+//            temp=temp.next;
+//        }
+
+//        return true;
     }
 }
