@@ -10,12 +10,12 @@ public class f_PalindromeLinkedList {
         node f = new node(20);
         node g = new node(10);
 
-        a.next = b;  // 10 -> 20
-        b.next = c;  // 10 -> 20 -> 30
-        c.next = d;  // 10 -> 20 -> 30 -> 40
-        d.next = e;  // 10 -> 20 -> 30 -> 40 -> 50
-        e.next = f;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60
-        f.next = g;  // 10 -> 20 -> 30 -> 40 -> 50 -> 60 -> 70
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = e;
+        e.next = f;
+        f.next = g;
         node temp=a;
         while(temp!=null){
             System.out.println(temp.data);
@@ -27,7 +27,7 @@ public class f_PalindromeLinkedList {
     }
 
     public boolean isPalindrome(node  head) {
-        if(head==null || head.next==null){
+        if(head==null && head.next==null){
             return true;
         }
         node  slow=head;
