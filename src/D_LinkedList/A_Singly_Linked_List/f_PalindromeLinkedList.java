@@ -46,7 +46,6 @@ public class f_PalindromeLinkedList {
             prev=curr;
             curr=next;
         }
-
         node  left=head;
         node  right=prev;
         while(right!=null){
